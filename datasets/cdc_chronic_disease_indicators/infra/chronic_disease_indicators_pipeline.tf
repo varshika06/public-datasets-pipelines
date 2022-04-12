@@ -16,15 +16,10 @@
 
 
 resource "google_bigquery_table" "cdc_chronic_disease_indicators_chronic_disease_indicators" {
-  project    = var.project_id
-  dataset_id = "cdc_chronic_disease_indicators"
-  table_id   = "chronic_disease_indicators"
-
+  project     = var.project_id
+  dataset_id  = "cdc_chronic_disease_indicators"
+  table_id    = "chronic_disease_indicators"
   description = "CDC U.S. Chronic Disease Indicators (CDI)"
-
-
-
-
   depends_on = [
     google_bigquery_dataset.cdc_chronic_disease_indicators
   ]
